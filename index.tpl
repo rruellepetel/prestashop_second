@@ -24,6 +24,15 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <h2>{l|truncate:20 s='welcome to the best online shop ever'}</h2>
+{if $cart_qties < 5}
+
+    <p>No free shipping under 5 products</p>
+
+{else}
+
+    <p>Free Shipping Enjoy !!!</p>
+
+{/if}
 <p>{$smarty.now|date_format:"%e %b %Y"}</p>
 
 {if isset($HOOK_HOME_TAB_CONTENT) && $HOOK_HOME_TAB_CONTENT|trim}
